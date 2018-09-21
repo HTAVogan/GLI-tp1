@@ -4,6 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Model implements Observable {
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public List<Item> getItems() {
+		return items;
+	}
+
+	public void setItems(List<Item> items) {
+		this.items = items;
+	}
+
 	private String title;
 	private List<Item> items;
 	
