@@ -6,9 +6,22 @@ import java.util.List;
 public class Model implements Observable {
 	private String title;
 	private List<Item> items;
-
+	private String unit;
 	private List<Observer> observers;
 	
+	
+	public String getTitle(int i) {
+		return items.get(i).getIntitule();
+	}
+	public String getDescription(int i) {
+		return items.get(i).getDesc();
+	}
+	public String getUnit() {
+		return unit;
+	}
+	public void setUnit(String u) {
+		unit=u;
+	}
 	public String getTitle() {
 		return title;
 	}
@@ -38,10 +51,11 @@ public class Model implements Observable {
 		this.observers = new ArrayList<Observer>();
 	}
 	
-	public Model(String title, List<Item> items) {
+	public Model(String title, List<Item> items,String unite) {
 		this.title = title;
 		this.items = items;
 		this.observers = new ArrayList<Observer>();
+		this.unit=unite;
 	}
 
 	@Override

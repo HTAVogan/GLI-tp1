@@ -7,4 +7,8 @@ public interface Observable {
 	public List<Item> getData();
 	public void addObserver(Observer o);
 	public void removeObserver(Observer o);
+	public String getTitle();
+	public String getUnit();
+	public String getTitle(int i);
+	public String getDescription(int i);
 }

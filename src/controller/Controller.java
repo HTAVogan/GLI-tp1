@@ -1,5 +1,6 @@
 package controller;
 
+import java.awt.Component;
 import java.util.List;
 
 import model.Item;
@@ -30,6 +31,12 @@ public class Controller implements Observer{
 	public void detach(Observable o) {
 		// TODO Auto-generated method stub
 		model = null;
+	}
+
+	@Override
+	public Observer getView() {
+		// TODO Auto-generated method stub
+		return view;
 	}
 
 }
