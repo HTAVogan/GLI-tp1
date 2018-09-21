@@ -4,6 +4,7 @@ public class Item {
 	private String intitule;
 	private String desc;
 	private float value;
+	
 	public String getIntitule() {
 		return intitule;
 	}
