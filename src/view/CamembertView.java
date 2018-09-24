@@ -35,6 +35,7 @@ import model.Observable;
 import model.Observer;
 
 import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
@@ -832,7 +833,10 @@ public class CamembertView extends JComponent implements MouseListener,
 		// display layout
 		GridLayout layout = new GridLayout(1, 2);
 //TODO
-		window.getContentPane().add(controller.getView());
+		JTable table=new JTable();
+		ImageIcon img = new ImageIcon(".\\add.png");
+		JButton addButton = new JButton(img);
+		window.getContentPane().add((CamembertView)controller.getView());
 		window.getContentPane().add(table);
 		window.getContentPane().add(addButton);
 
