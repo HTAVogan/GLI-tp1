@@ -705,22 +705,22 @@ public class CamembertView extends JComponent implements MouseListener,
 	public void handleClic(int x, int y) {
 
 		if (center.contains(x, y)) {
-			controller.deSelect();
+			this.deSelect();
 		} else {
 
 			for (int i = 0; i < arcs.size(); i++) {
 				if (arcs.get(i).contains(x, y) && !emptyCenter.contains(x, y)) {
-					controller.selectPie(i);
+					this.selectPie(i);
 				}
 			}
 		}
 
 		if (previous.contains(x, y)) {
-			controller.nextPie();
+			this.nextPie();
 		}
 
 		if (next.contains(x, y)) {
-			controller.previousPie();
+			this.previousPie();
 		}
 
 	}
@@ -731,23 +731,23 @@ public class CamembertView extends JComponent implements MouseListener,
 		// TODO Auto-generated method stub
 
 		if (center.contains(arg0.getX(), arg0.getY())) {
-			controller.deSelect();
+			this.deSelect();
 		} else {
 
 			for (int i = 0; i < arcs.size(); i++) {
 				if (arcs.get(i).contains(arg0.getX(), arg0.getY())
 						&& !emptyCenter.contains(arg0.getX(), arg0.getY())) {
-					controller.selectPie(i);
+					this.selectPie(i);
 				}
 			}
 		}
 
 		if (previous.contains(arg0.getX(), arg0.getY())) {
-			controller.nextPie();
+			this.nextPie();
 		}
 
 		if (next.contains(arg0.getX(), arg0.getY())) {
-			controller.previousPie();
+			this.previousPie();
 		}
 
 	}
@@ -845,6 +845,46 @@ public class CamembertView extends JComponent implements MouseListener,
 		window.setVisible(true);
 		// window.pack();
 	}
+		@Override
+		public void update() {
+			// TODO Auto-generated method stub
+			
+		}
+		@Override
+		public void attach(Observable o) {
+			// TODO Auto-generated method stub
+			
+		}
+		@Override
+		public void detach(Observable o) {
+			// TODO Auto-generated method stub
+			
+		}
+		@Override
+		public Observer getView() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		@Override
+		public void setSelected(boolean selected) {
+			// TODO Auto-generated method stub
+			
+		}
+		@Override
+		public boolean isSelected() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+		@Override
+		public int getSelectedPie() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		@Override
+		public void setSelectedPie(int pie) {
+			// TODO Auto-generated method stub
+			
+		}
 	
 	
 }

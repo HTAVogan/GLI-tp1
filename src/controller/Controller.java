@@ -11,6 +11,9 @@ public class Controller implements Observer{
 
 	private Observable model;
 	private Observer view;
+	private boolean selected = false;
+	private int selectedPie;
+	
 	
 	@Override
 	public void update() {
@@ -39,4 +42,46 @@ public class Controller implements Observer{
 		return view;
 	}
 
+	@Override
+	public void setSelected(boolean selected) {
+		// TODO Auto-generated method stub
+		this.selected = selected;
+	}
+
+	@Override
+	public boolean isSelected() {
+		// TODO Auto-generated method stub
+		return selected;
+	}
+
+	@Override
+	public int getSelectedPie() {
+		// TODO Auto-generated method stub
+		return selectedPie;
+	}
+
+	@Override
+	public void setSelectedPie(int pie) {
+		// TODO Auto-generated method stub
+		this.selectedPie = pie;
+	}
+/*
+	@Override
+	public void deSelect() {
+		// TODO Auto-generated method stub
+		this.selected = false;
+	}
+
+	@Override
+	public void nextPie() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void previousPie() {
+		// TODO Auto-generated method stub
+		
+	}
+*/
 }
