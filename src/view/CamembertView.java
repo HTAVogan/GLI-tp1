@@ -34,6 +34,7 @@ import java.util.ArrayList;
 import model.Observable;
 import model.Observer;
 
+import javax.imageio.ImageIO;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
