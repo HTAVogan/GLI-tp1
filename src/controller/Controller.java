@@ -17,6 +17,7 @@ public class Controller implements Observer{
 	public Controller(Observable model, Observer view) {
 		this.model = model;
 		this.view = view;
+		selected = false;
 	}
 	
 	@Override

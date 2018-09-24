@@ -828,17 +828,20 @@ public class CamembertView extends JComponent implements MouseListener,
 		
 		int oldFirst = 0;
 		int oldLast = 0;
-
-		// pour le test: creation du controller
-		Observer controller = new Controller(model, new CamembertView(model));
 		
+		Observer view = new CamembertView(model);
+		
+		// pour le test: creation du controller
+		Observer controller = new Controller(model, view);
+		((CamembertView)view).setController(controller);
 		
 		// display layout
 		GridLayout layout = new GridLayout(1, 2);
-//TODO
+		//TODO
 		JTable table=new JTable();
 		ImageIcon img = new ImageIcon(".\\add.png");
 		JButton addButton = new JButton(img);
+		
 		window.getContentPane().add((CamembertView)controller.getView());
 		window.getContentPane().add(table);
 		window.getContentPane().add(addButton);
