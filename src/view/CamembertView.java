@@ -187,7 +187,6 @@ public class CamembertView extends JComponent implements MouseListener,
 
 		fontCenter = new Font("Arial", Font.BOLD, 14);
 		fontTags = new Font("Serial", Font.PLAIN, 12);
-
 	}
 
 	public void setController(Observer c) {
@@ -729,7 +728,7 @@ public class CamembertView extends JComponent implements MouseListener,
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-
+		System.out.println("clicked at : " + arg0.getX() + " , " + arg0.getY());
 		if (center.contains(arg0.getX(), arg0.getY())) {
 			this.deSelect();
 		} else {
@@ -781,7 +780,7 @@ public class CamembertView extends JComponent implements MouseListener,
 	@Override
 	public void mouseDragged(MouseEvent e) {
 		// TODO Auto-generated method stub
-
+		System.out.println("Mouse dragged !");
 		// difference in x from center:
 		double dx = pieCenter.getX() - e.getX();
 		double dy = pieCenter.getY() - e.getY();
@@ -824,7 +823,7 @@ public class CamembertView extends JComponent implements MouseListener,
 		List<Item> items = new ArrayList<Item>();
 		items.add(new Item("premier item", "Ceci est le premier item ! on espère que ça marche!", (float) 4.20));
 		items.add(new Item("second item", "deuxième item", (float) 423.24));
-		Observable model = new Model("premier modele", items, "weeed");
+		Observable model = new Model("premier modele", items, "hemp");
 		
 		int oldFirst = 0;
 		int oldLast = 0;
@@ -838,13 +837,13 @@ public class CamembertView extends JComponent implements MouseListener,
 		// display layout
 		GridLayout layout = new GridLayout(1, 2);
 		//TODO
-		JTable table=new JTable();
-		ImageIcon img = new ImageIcon(".\\add.png");
-		JButton addButton = new JButton(img);
+		//JTable table=new JTable();
+		//ImageIcon img = new ImageIcon(".\\add.png");
+		//JButton addButton = new JButton(img);
 		
 		window.getContentPane().add((CamembertView)controller.getView());
-		window.getContentPane().add(table);
-		window.getContentPane().add(addButton);
+		//window.getContentPane().add(table);
+		//window.getContentPane().add(addButton);
 
 		window.setLayout(layout);
 		window.pack();
