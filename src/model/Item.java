@@ -5,6 +5,12 @@ public class Item {
 	private String desc;
 	private float value;
 	
+	public Item(String intitule, String desc, float value) {
+		this.intitule = intitule;
+		this.desc = desc;
+		this.value = value;
+	}
+	
 	public String getIntitule() {
 		return intitule;
 	}

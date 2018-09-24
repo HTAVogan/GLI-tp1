@@ -821,13 +821,16 @@ public class CamembertView extends JComponent implements MouseListener,
 		window.setBounds(30, 30, 400, 400);
 		
 		// pour le test: creation du modele et insertion des données
-        // Model model;
+		List<Item> items = new ArrayList<Item>();
+		items.add(new Item("premier item", "Ceci est le premier item ! on espère que ça marche!", (float) 4.20));
+		items.add(new Item("second item", "deuxième item", (float) 423.24));
+		Observable model = new Model("premier modele", items, "weeed");
 		
 		int oldFirst = 0;
 		int oldLast = 0;
 
 		// pour le test: creation du controller
-		// Controller controller;
+		Observer controller = new Controller(model, new CamembertView(model));
 		
 		
 		// display layout

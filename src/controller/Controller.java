@@ -14,6 +14,10 @@ public class Controller implements Observer{
 	private boolean selected = false;
 	private int selectedPie;
 	
+	public Controller(Observable model, Observer view) {
+		this.model = model;
+		this.view = view;
+	}
 	
 	@Override
 	public void update() {
